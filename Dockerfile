@@ -1,4 +1,4 @@
-FROM golang:alpine
+FROM docker.io/golang:alpine
 
 MAINTAINER the Digital Garage <support@thedigitalgarage.io>
 
