@@ -1,0 +1,8 @@
+#!/bin/sh -e
+
+echo "-> Copying sources ..."
+cp -Rf /tmp/src/. ./
+
+# Check if hugo can compile your site.
+# hugo --baseURL=${HUGO_BASE_URL:-http://hugo-test.apps.thedigitalgarage.io} --theme ${HUGO_THEME:-casper} \
+#    --renderToMemory -v && rm -rf public
