@@ -13,11 +13,7 @@ RUN mkdir -p /opt/app-root/src/static && \
 
 WORKDIR /opt/app-root/src
 
-RUN apk add --update git mercurial binutils && \
-    go get -v -u github.com/gohugoio/hugo && \
-    strip /go/bin/hugo && \
-    apk del git mercurial binutils  && \
-    rm -rf /go/src /go/pkg
+RUN apk add --update git hugo
 
 COPY ./s2i/* /usr/libexec/s2i/
 USER 1001
