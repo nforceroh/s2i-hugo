@@ -16,4 +16,6 @@ WORKDIR /opt/app-root/src
 RUN apk add --update git hugo
 
 COPY ./s2i/* /usr/libexec/s2i/
+RUN chmod +x /usr/libexec/s2i/*
+
 USER 1001
