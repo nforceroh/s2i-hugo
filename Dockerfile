@@ -9,7 +9,9 @@ EXPOSE 8080
 RUN mkdir -p /opt/app-root/src/static && \
     chmod -R og+rwx /opt/app-root && \
     chown -R 1001:0 /opt/app-root && \
-    mkdir -p /usr/libexec/s2i
+    mkdir -p /usr/libexec/s2i && \
+    cd /opt/app-root/src && \
+    git clone https://github.com/digitalcraftsman/hugo-material-docs.git themes/hugo-material-docs
 
 WORKDIR /opt/app-root/src
 
